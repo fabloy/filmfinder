@@ -1,4 +1,5 @@
 export let showUserSelected = (user)=>{
+    
     document.getElementById("userSelectedWrapper").innerHTML=`<article>
      <p>${user.firstname}</p>
      <p>${user.lastname}</p>
