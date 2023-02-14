@@ -1,23 +1,25 @@
 import { name } from "../control/variables.js"
 
+
 //showAutocomplete fa apparire e aggiorna l'autocomplete 
 //dipendente dalla ricerca dell'utente in campo input
-export let showAutocomplete = (elementHTML, usersFind)=>{
-  
- //azione di inserimento degli utenti all'interno dell'autocomplete.
- usersFind.length>0 && name.value.length>0 ? elementHTML.innerHTML = usersFind.map(el=>{
+export let showAutocomplete = (elementHTML, filmsFind)=>{
+ //azione di modifica del DOM con inserimento dei titoli dei film all'interno dell'autocomplete.
+ filmsFind!==undefined ? elementHTML.innerHTML = filmsFind?.map(el=>{
   return `
           <li 
            class="autocompleteElement" 
-           code=${el.user.id}
+           code=${el.imdbID}
            >
-           ${el?.user.firstname} ${el?.user.lastname}
-           <img src=${el?.user.picture.large}  width="40" height="40">
+           <p>${el.Title}</p>
+           
+           <img src=${el.Poster}  width="50" height="50">
           </li>
          `
     })
-  :
-   listNames.innerHTML=""
+    :
+    elementHTML.innerHTML=""
+    name.value.length === 0 ? elementHTML.innerHTML = "" : elementHTML.innerHTML=elementHTML.innerHTML
 }
 
 

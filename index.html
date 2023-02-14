@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autocomplete</title>
+    <title>Filmfinder</title>
     <link rel="stylesheet" href="style.css">
     
 </head>
@@ -12,21 +12,25 @@
     <main>
      <nav>
       <div>
-       <h1>FalseBook</h1>
+       <h1>Filmfinder</h1>
       </div>
      </nav>
+     
      <section id="topSection">
         <form action="">
-         <label for="name">Name</label>
-         <input type="text" id="name" placeholder="Insert a name">
+         <label for="name">Film</label>
+         <input type="text" id="name" placeholder="Insert a film name">
          <ul id="listNames">
          </ul>
-         <hr>
-         <input type="submit">
+         
         </form>
+        <hr>
+        <section>
+            Inserisci un titolo di un film...
+         </section>
      </section>
      <section id="downSection">
-        <div id="userSelectedWrapper"></div>
+        <div id="filmSelectedWrapper"></div>
      </section>
     </main>
     <script type="module" defer src="control/main.js"></script>
